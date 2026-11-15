@@ -10,9 +10,8 @@
 ---
 
 ## 1. Scope
-- The only target scanned was **Bluemoon**, an intentionally vulnerable VulnHub machine running in my own lab.
-- The attacker and target both run in **VMware Workstation** on a private **Host-only** network (`192.168.240.0/24`). No public or real systems were involved.
-- Activities were limited to **host discovery** and **port/service scanning**. No exploitation, brute-forcing, persistence, or destructive testing was performed.
+The only target scanned was Bluemoon, an intentionally vulnerable VulnHub machine running in my own lab. The attacker and target both run in VMware Workstation on a private Host-only network (`192.168.240.0/24`). No public or real systems were involved.
+Activities were limited to host discovery and port or service scanning. No exploitation, brute-forcing, persistence, or destructive testing was performed.
 
 ## 2. Target Setup (Victim)
 
