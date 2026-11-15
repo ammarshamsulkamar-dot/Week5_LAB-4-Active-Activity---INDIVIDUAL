@@ -1,4 +1,4 @@
-# Lab 4: Active Reconnaissance (Footprinting) – Individual
+# Lab 4: Active Reconnaissance (Footprinting) 
 
 | | |
 |---|---|
@@ -23,7 +23,7 @@ Activities were limited to host discovery and port or service scanning. No explo
 | IP address | `192.168.240.128` |
 | MAC address | `00:0C:29:1C:E8:C3` |
 
-**Identity check:** The MAC address in VMware's *Network Adapter → Advanced* settings for Bluemoon (`00:0C:29:1C:E8:C3`) matches the MAC that Nmap reported for `192.168.240.128`, which confirms this IP belongs to the target.
+**Identity check:** The MAC address in VMware's *Network Adapter : Advanced* settings for Bluemoon (`00:0C:29:1C:E8:C3`) matches the MAC that Nmap reported for `192.168.240.128`, which confirms this IP belongs to the target.
 
 ![Target MAC – Bluemoon](02-target-mac.png)
 
@@ -46,7 +46,7 @@ ip -br addr
 ip route
 ```
 
-![Attacker ip addr / ip route]((03-ip-addr.png)
+
 
 **Observations:**
 - `eth0` is UP with the address `192.168.240.129/24`. Its IPv6 link-local address `fe80::20c:29ff:fe97:faa1` is derived from the MAC `00:0C:29:97:FA:A1`, which confirms this is the Kali adapter.
@@ -66,7 +66,7 @@ sudo nmap -sn 192.168.240.0/24
 | 192.168.240.254 | 00:50:56:E1:9B:40 | VMware | VMware DHCP server |
 | 192.168.240.129 | (local) | – | Attacker – Kali (own host) |
 
-Nmap scanned 256 addresses and found 4 hosts up in 10.91 seconds (2026-11-15 14:39 -0500).
+Nmap scanned 256 addresses and found 4 hosts up in 10.91 seconds.
 
 ![Ping sweep](04-nmap-sn.png)
 
@@ -83,7 +83,7 @@ sudo nmap -sV 192.168.240.128
 | 2049/tcp | open | nfs_acl | 3 (RPC #100227) |
 
 - 986 ports were **filtered (no response)** and 10 were **filtered (host-prohibited)**.
-- Scan took 15.67 seconds (2026-11-15 15:09 -0500).
+- Scan took 15.67 seconds.
 
 ![Service scan](05-nmap-sV.png)
 
