@@ -77,9 +77,13 @@ sudo nmap -sV 192.168.240.128
 
 | Port | State | Service | Version |
 |---|---|---|---|
-| _fill in_ | open | _fill in_ | _fill in_ |
-| _fill in_ | open | _fill in_ | _fill in_ |
-| _fill in_ | open | _fill in_ | _fill in_ |
+| 22/tcp | open | ssh | OpenSSH 7.4 (protocol 2.0) |
+| 80/tcp | open | http | Apache httpd 2.4.6 ((CentOS)) PHP/5.4.16 |
+| 111/tcp | open | rpcbind | 2-4 (RPC #100000) |
+| 2049/tcp | open | nfs_acl | 3 (RPC #100227) |
+
+- 986 ports were **filtered (no response)** and 10 were **filtered (host-prohibited)**.
+- Scan took 15.67 seconds (2026-11-15 15:09 -0500).
 
 ![Service scan](05-nmap-sV.png)
 
